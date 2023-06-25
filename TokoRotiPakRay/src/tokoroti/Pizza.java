@@ -159,8 +159,9 @@ public class Pizza extends HargaBahan{
         BanyakPizza();
         
         //Menghitung Harga Pizza per-pcs
-        double HargaPizzaPCS = Math.ceil(HargaAdonanPizza() / BanyakPizza());
-        System.out.println("Harga Per-pcs Pizza = " + HargaPizzaPCS);
+        double HargaPizzaPCS = (HargaAdonanPizza() / BanyakPizza());
+        double HargaPizzaPCSBulat = (Math.ceil(HargaPizzaPCS / 500) *500);
+        System.out.println("Harga Per-pcs Pizza = " + HargaPizzaPCSBulat);
 //        System.out.println("Tepung = " + hargaPizzaTepung);
 //        System.out.println("Gula = " + hargaPizzagula);
 //        System.out.println("Butter = " + hargaPizzabutter);
