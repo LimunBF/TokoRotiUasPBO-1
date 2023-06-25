@@ -51,9 +51,13 @@ public class Pizza extends HargaBahan{
 	}
 
 	@Override
-	protected double TotalAdonanRoman() {
+	protected double TotalAdonan() {
 		// TODO Auto-generated method stub
 		return 1950;
+	}
+	@Override
+	protected double BeratRoti() {
+		return 190;
 	}
 	
 	//Variabel Untuk Pembelian Bahan RotiTawar
@@ -75,7 +79,7 @@ public class Pizza extends HargaBahan{
     private double hargaPizzasusucair;
     private double hargaPizzatelur;
     private double hargaPizzaesbatu;
-    private double BanyakRotiSatuAdonan = 10;
+    private double BanyakRotiSatuAdonan;
     public double HargaPizzaPCS;
 
     public void adonanPizza() {
@@ -142,13 +146,20 @@ public class Pizza extends HargaBahan{
                 + (pcsEsbatu * hargaEsbatu());
         return TotalHarga;
     }
+    
+    //Menghitung Banyak Roti per adonan
+    private double BanyakPizza() {
+    	BanyakRotiSatuAdonan = Math.ceil(TotalAdonan() / BeratRoti());
+    	return BanyakRotiSatuAdonan;
+    }
     	
     // Calculate price per piece of Roti Tawar
     public void HargaPizzaPCS() {
         adonanPizza(); // Calculate the ingredient quantities first
+        BanyakPizza();
         
         //Menghitung Harga Pizza per-pcs
-        double HargaPizzaPCS = (HargaAdonanPizza() / BanyakRotiSatuAdonan);
+        double HargaPizzaPCS = Math.ceil(HargaAdonanPizza() / BanyakPizza());
         System.out.println("Harga Per-pcs Pizza = " + HargaPizzaPCS);
 //        System.out.println("Tepung = " + hargaPizzaTepung);
 //        System.out.println("Gula = " + hargaPizzagula);

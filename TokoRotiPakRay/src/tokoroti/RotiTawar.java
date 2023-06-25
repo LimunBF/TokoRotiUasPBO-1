@@ -51,9 +51,13 @@ public class RotiTawar extends HargaBahan {
 	}
 
 	@Override
-	protected double TotalAdonanRoman() {
+	protected double TotalAdonan() {
 		// TODO Auto-generated method stub
 		return 2065;
+	}
+	@Override
+	protected double BeratRoti() {
+		return 400;
 	}
 
 	// Variables for purchasing RotiTawar ingredients
@@ -75,7 +79,7 @@ public class RotiTawar extends HargaBahan {
 	private double hargaRowarsusucair;
 	private double hargaRowartelur;
 	private double hargaRowaresbatu;
-	private double BanyakRotiSatuAdonan = 4;
+	private double BanyakRotiSatuAdonan;
 	public double HargaRoWarPCS;
 
 	//    public void adonanRotiTawar() {
@@ -142,6 +146,12 @@ public class RotiTawar extends HargaBahan {
 		}
 	}
 
+	
+    //Menghitung Banyak Roti per adonan
+    private double BanyakRotiTawar() {
+    	BanyakRotiSatuAdonan = TotalAdonan() / BeratRoti();
+    	return BanyakRotiSatuAdonan;
+    }
 	// Calculate prices for each ingredient
     private double HargaAdonanRowar() {
         double TotalHarga = (pcsTepungterigu * hargaTepungterigu())
@@ -158,9 +168,10 @@ public class RotiTawar extends HargaBahan {
 	// Calculate price per piece of Roti Tawar
 	public void HargaRotiTawarPCS() {
 		adonanRotiTawar(); // Calculate the ingredient quantities first
-		// Calculate the price per piece of Roti Tawar
+		BanyakRotiTawar();
 		
-		double HargaRoWarPCS = HargaAdonanRowar() / BanyakRotiSatuAdonan;
+		// Calculate the price per piece of Roti Tawar
+		double HargaRoWarPCS = Math.ceil(HargaAdonanRowar() / BanyakRotiTawar());
 		System.out.println("Harga Per-pcs Roti Tawar = " + HargaRoWarPCS);
 		//        System.out.println("Harga Tepung Terigu = " + hargaRowarTepung);
 	}
