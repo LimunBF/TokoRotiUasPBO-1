@@ -1,94 +1,163 @@
 package tokoroti;
 
-public class Pizza {
+public class Pizza extends HargaBahan{
 	
-	
-	//Variabel Untuk Bahan 1 adonan Roti tawar
-	protected int Tepungterigu = 1000;
-	protected int Gulapasir = 100;
-	protected int Butter = 100;
-	protected int Ragi = 20;
-	protected int Susububuk = 200;
-	protected int Susucair = 180;
-	protected int Telur = 50;
-	protected int Esbatu = 300;
+	@Override
+	protected double Tepungterigu() {
+		// TODO Auto-generated method stub
+		return 1000;
+	}
+
+	@Override
+	protected double Gulapasir() {
+		// TODO Auto-generated method stub
+		return 100;
+	}
+
+	@Override
+	protected double Butter() {
+		// TODO Auto-generated method stub
+		return 100;
+	}
+
+	@Override
+	protected double Ragi() {
+		// TODO Auto-generated method stub
+		return 20;
+	}
+
+	@Override
+	protected double Susububuk() {
+		// TODO Auto-generated method stub
+		return 200;
+	}
+
+	@Override
+	protected double Susucair() {
+		// TODO Auto-generated method stub
+		return 180;
+	}
+
+	@Override
+	protected double Telur() {
+		// TODO Auto-generated method stub
+		return 50;
+	}
+
+	@Override
+	protected double Esbatu() {
+		// TODO Auto-generated method stub
+		return 300;
+	}
+
+	@Override
+	protected double TotalAdonanRoman() {
+		// TODO Auto-generated method stub
+		return 1950;
+	}
 	
 	//Variabel Untuk Pembelian Bahan RotiTawar
-	protected int pcsTepungterigu = 0;
-	protected int pcsGulapasir = 0;
-	protected int pcsButter = 0;
-	protected int pcsRagi = 0;
-	protected int pcsSusububuk = 0;
-	protected int pcsSusucair = 0;
-	protected int pcsTelur = 0;
-	protected int pcsEsbatu = 0;
+    private double pcsTepungterigu = 0;
+    private double pcsGulapasir = 0;
+    private double pcsButter = 0;
+    private double pcsRagi = 0;
+    private double pcsSusububuk = 0;
+    private double pcsSusucair = 0;
+    private double pcsTelur = 0;
+    private double pcsEsbatu = 0;
 
-	public void adonanRotiManis()
-	{
-		if (Tepungterigu == 1000) 
-		{
-			pcsTepungterigu =1;
-		}
-		if (Tepungterigu > 1000)
-		{
-			this.pcsTepungterigu = (this.Tepungterigu / 1000) *1; 
-		}
-		if (Gulapasir == 1000)  
-		{
-			pcsGulapasir = (1);
-		}
-		if (Gulapasir > 1000)
-		{
-			this.pcsGulapasir = (Gulapasir / 1000) *1;
-		}
-		if (Butter == 500) 
-		{
-			pcsButter = (1);
-		}
-		if (Butter > 500)
-		{
-			this.pcsButter = (Butter / 500) *1;
-		}
-		if (Ragi == 11) 
-		{
-			pcsRagi = 1;
-		}
-		if (Ragi > 11)
-		{
-			this.pcsRagi = (this.Ragi / 11 ) *1;
-		}
-		if (Susububuk == 1000) 
-		{
-			pcsSusububuk = 1;
-		}
-		if (Susububuk > 1000)
-		{
-			this.pcsSusububuk = (Susububuk / 1000) *1;
-		}
-		if (Susucair == 1000) 
-		{
-			pcsSusucair = (1);
-		}
-		if (Susucair > 1000)
-		{
-			this.pcsSusucair = Susucair / 500 *1;
-		}
-		if (Telur == 1000) 
-		{
-			pcsTelur = (1);
-		}
-		if (Telur > 1000)
-		{
-			this.pcsTelur = Telur / 1000 *1;
-		}
-		if (Esbatu == 1000) 
-		{
-			pcsEsbatu = (1);
-		}
-		if (Telur > 1000)
-		{
-			this.pcsEsbatu = Esbatu / 1000 *1;
-		}
-		
-	}
+    // Variables for prices
+    private double hargaPizzaTepung;
+    private double hargaPizzagula;
+    private double hargaPizzabutter;
+    private double hargaPizzaragi;
+    private double hargaPizzasusububuk;
+    private double hargaPizzasusucair;
+    private double hargaPizzatelur;
+    private double hargaPizzaesbatu;
+    private double BanyakRotiSatuAdonan = 10;
+    public double HargaPizzaPCS;
+
+    public void adonanPizza() {
+    	{
+    		if (Tepungterigu() <= 1000){
+    			pcsTepungterigu = 1;
+    		}
+    		else if(Tepungterigu() > 1000) {
+    			pcsTepungterigu = Math.ceil((Tepungterigu() / 1000 ) *1);
+    		}
+    		if (Gulapasir() <= 1000) {
+    			pcsGulapasir = 1;
+    		}
+    		else if(Gulapasir() > 1000) {
+    			pcsGulapasir = Math.ceil((Gulapasir() / 1000) * 1);
+    		}
+    		if (Butter() <= 500) {
+    			pcsButter = 1;
+    		}
+    		else if(Butter() >500) {
+    			pcsButter = Math.ceil((Butter() / 500) * 1);
+    		}
+    		if (Ragi() <= 11) {
+    			pcsRagi = 1;
+    		}
+    		else if(Ragi() > 11) {
+    			pcsRagi = Math.ceil((Ragi() / 11) *1);
+    		}
+    		if (Susububuk() <= 1000) {
+    			pcsSusububuk = 1;
+    		}
+    		else if(Susububuk() > 1000) {
+    			pcsSusububuk = Math.ceil((Susububuk() / 1000) *1);
+    		}
+    		if (Susucair() <= 1000) {
+    			pcsSusucair = 1;
+    		}
+    		else if(Susucair() > 1000) {
+    			pcsSusucair = Math.ceil((Susucair() / 1000) *1);
+    		}
+    		if (Telur() <= 1000) {
+    			pcsTelur = 1;
+    		}
+    		else if(Telur() > 1000) {
+    			pcsTelur = Math.ceil((Telur() / 1000)*1);
+    		}
+    		if(Esbatu() <=1000) {
+    			pcsEsbatu = 1;
+    		}
+    		else if(Esbatu() >1000) {
+    			pcsEsbatu = Math.ceil((Esbatu() /1000) *1);
+    		}
+    	}
+    }
+    
+    private double HargaAdonanPizza() {
+        double TotalHarga = (pcsTepungterigu * hargaTepungterigu())
+                + (pcsGulapasir * hargaGulapasir())
+                + (pcsButter * hargaButter())
+                + (pcsRagi * hargaRagi())
+                + (pcsSusububuk * hargaSusububuk())
+                + (pcsSusucair * hargaSusucair())
+                + (pcsTelur * hargaTelur())
+                + (pcsEsbatu * hargaEsbatu());
+        return TotalHarga;
+    }
+    	
+    // Calculate price per piece of Roti Tawar
+    public void HargaPizzaPCS() {
+        adonanPizza(); // Calculate the ingredient quantities first
+        
+        //Menghitung Harga Pizza per-pcs
+        double HargaPizzaPCS = (HargaAdonanPizza() / BanyakRotiSatuAdonan);
+        System.out.println("Harga Per-pcs Pizza = " + HargaPizzaPCS);
+//        System.out.println("Tepung = " + hargaPizzaTepung);
+//        System.out.println("Gula = " + hargaPizzagula);
+//        System.out.println("Butter = " + hargaPizzabutter);
+//        System.out.println("Ragi = " + hargaPizzaragi);
+//        System.out.println("SusuBubuk = " + hargaPizzasusububuk);
+//        System.out.println("SusuCair = " + hargaPizzasusucair);
+//        System.out.println("Telur = " + hargaPizzatelur);
+//        System.out.println("EsBatu = " + hargaPizzaesbatu);
+        
+   }
 }

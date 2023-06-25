@@ -5,12 +5,15 @@ public class PakRay {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Total Roti :");
-//		RotiManis Satu = new RotiManis();
-//		Satu.HargaRotiManisPCS();
 		
-		RotiManis1 Dua = new RotiManis1();
+		RotiManis Satu = new RotiManis();
+		Satu.HargaRotiManisPCS();
+
+		RotiTawar Dua = new RotiTawar();
 		Dua.HargaRotiTawarPCS();
 		
+		Pizza Tiga = new Pizza();
+		Tiga.HargaPizzaPCS();		
 	}
 	
 //	public void adonanRotiTawar()

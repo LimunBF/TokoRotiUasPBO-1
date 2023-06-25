@@ -35,6 +35,15 @@ abstract public class HargaBahan extends BeratBahanRoti{
 		return 2_000;
 	}
 	
+    abstract protected double Tepungterigu();
+    abstract protected double Gulapasir();
+    abstract protected double Butter();
+    abstract protected double Ragi();
+    abstract protected double Susububuk();
+    abstract protected double Susucair();
+    abstract protected double Telur();
+    abstract protected double Esbatu();
+    abstract protected double TotalAdonanRoman();
 	
 
 }

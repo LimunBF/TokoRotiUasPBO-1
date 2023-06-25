@@ -2,36 +2,36 @@ package tokoroti;
 
 public class BeratBahanRoti {
 	
-	int beratTepungterigu() 
+	protected int beratTepungterigu() 
 	{
 		return 1000;
 	}
 	
-	int beratGulapasir() 
+	protected int beratGulapasir() 
 	{
 		return 1000;
 	}
-	 int beratButter() 
+	protected int beratButter() 
 	{
 		return 500;
 	}
-	 int beratRagi() 
+	protected int beratRagi() 
 	{
 		return 11;
 	}
-	 int beratSusububuk() 
+	protected int beratSusububuk() 
 	{
 		return 1_000;
 	}
-	 static int beratSusucair() 
+	protected int beratSusucair() 
 	{
 		return 10000;
 	}
-	 int beratTelur() 
+	protected int beratTelur() 
 	{
 		return 10000;
 	}
-	public int beratEsbatu() 
+	protected int beratEsbatu() 
 	{
 		return 10000;
 	}

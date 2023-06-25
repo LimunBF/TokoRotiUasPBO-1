@@ -1,111 +1,169 @@
 package tokoroti;
 public class RotiTawar extends HargaBahan {
 
-    // Variables for 1 batch of Roti Tawar ingredients
-    private float Tepungterigu = 1000;
-    private float Gulapasir = 125;
-    private float Butter = 100;
-    private float Ragi = 20;
-    private float Susububuk = 250;
-    private float Susucair = 200;
-    private float Telur = 70;
-    private float Esbatu = 300;
+	// Variables for 1 batch of Roti Tawar ingredients
+	@Override
+	protected double Tepungterigu() {
+		// TODO Auto-generated method stub
+		return 1000;
+	}
 
-    // Variables for purchasing RotiTawar ingredients
-    private float pcsTepungterigu = 0;
-    private float pcsGulapasir = 0;
-    private float pcsButter = 0;
-    private float pcsRagi = 0;
-    private float pcsSusububuk = 0;
-    private float pcsSusucair = 0;
-    private float pcsTelur = 0;
-    private float pcsEsbatu = 0;
+	@Override
+	protected double Gulapasir() {
+		// TODO Auto-generated method stub
+		return 125;
+	}
 
-    // Variables for prices
-    private float hargaRowarTepung;
-    private float hargaRowargula;
-    private float hargaRowarbutter;
-    private float hargaRowarragi;
-    private float hargaRowarsusububuk;
-    private float hargaRowarsusucair;
-    private float hargaRowartelur;
-    private float hargaRowaresbatu;
-    private int BanyakRotiSatuAdonan = 50;
-    public float HargaRoWarPCS;
+	@Override
+	protected double Butter() {
+		// TODO Auto-generated method stub
+		return 100;
+	}
 
-    public void adonanRotiTawar() {
-        pcsTepungterigu = Tepungterigu / beratTepungterigu();
-        pcsGulapasir = Gulapasir / beratGulapasir();
-        pcsButter = Butter / beratButter();
-        pcsRagi = Ragi / beratRagi();
-        pcsSusububuk = Susububuk / beratSusububuk();
-        pcsSusucair = Susucair / beratSusucair();
-        pcsTelur = Telur / beratTelur();
-        pcsEsbatu = Esbatu / beratEsbatu();
+	@Override
+	protected double Ragi() {
+		// TODO Auto-generated method stub
+		return 20;
+	}
+
+	@Override
+	protected double Susububuk() {
+		// TODO Auto-generated method stub
+		return 250;
+	}
+
+	@Override
+	protected double Susucair() {
+		// TODO Auto-generated method stub
+		return 200;
+	}
+
+	@Override
+	protected double Telur() {
+		// TODO Auto-generated method stub
+		return 70;
+	}
+
+	@Override
+	protected double Esbatu() {
+		// TODO Auto-generated method stub
+		return 300;
+	}
+
+	@Override
+	protected double TotalAdonanRoman() {
+		// TODO Auto-generated method stub
+		return 2065;
+	}
+
+	// Variables for purchasing RotiTawar ingredients
+	private double pcsTepungterigu = 0;
+	private double pcsGulapasir = 0;
+	private double pcsButter = 0;
+	private double pcsRagi = 0;
+	private double pcsSusububuk = 0;
+	private double pcsSusucair = 0;
+	private double pcsTelur = 0;
+	private double pcsEsbatu = 0;
+
+	// Variables for prices
+	private double hargaRowarTepung;
+	private double hargaRowargula;
+	private double hargaRowarbutter;
+	private double hargaRowarragi;
+	private double hargaRowarsusububuk;
+	private double hargaRowarsusucair;
+	private double hargaRowartelur;
+	private double hargaRowaresbatu;
+	private double BanyakRotiSatuAdonan = 4;
+	public double HargaRoWarPCS;
+
+	//    public void adonanRotiTawar() {
+	//        pcsTepungterigu = Tepungterigu / beratTepungterigu();
+	//        pcsGulapasir = Gulapasir / beratGulapasir();
+	//        pcsButter = Butter / beratButter();
+	//        pcsRagi = Ragi / beratRagi();
+	//        pcsSusububuk = Susububuk / beratSusububuk();
+	//        pcsSusucair = Susucair / beratSusucair();
+	//        pcsTelur = Telur / beratTelur();
+	//        pcsEsbatu = Esbatu / beratEsbatu();
+	//    }
+
+
+	public void adonanRotiTawar()
+	{
+		if (Tepungterigu() <= 1000){
+			pcsTepungterigu = 1;
+		}
+		else if(Tepungterigu() > 1000) {
+			pcsTepungterigu = Math.ceil((Tepungterigu() / 1000 ) *1);
+		}
+		if (Gulapasir() <= 1000) {
+			pcsGulapasir = 1;
+		}
+		else if(Gulapasir() > 1000) {
+			pcsGulapasir = Math.ceil((Gulapasir() / 1000) * 1);
+		}
+		if (Butter() <= 500) {
+			pcsButter = 1;
+		}
+		else if(Butter() >500) {
+			pcsButter = Math.ceil((Butter() / 500) * 1);
+		}
+		if (Ragi() <= 11) {
+			pcsRagi = 1;
+		}
+		else if(Ragi() > 11) {
+			pcsRagi = Math.ceil((Ragi() / 11) *1);
+		}
+		if (Susububuk() <= 1000) {
+			pcsSusububuk = 1;
+		}
+		else if(Susububuk() > 1000) {
+			pcsSusububuk = Math.ceil((Susububuk() / 1000) *1);
+		}
+		if (Susucair() <= 1000) {
+			pcsSusucair = 1;
+		}
+		else if(Susucair() > 1000) {
+			pcsSusucair = Math.ceil((Susucair() / 1000) *1);
+		}
+		if (Telur() <= 1000) {
+			pcsTelur = 1;
+		}
+		else if(Telur() > 1000) {
+			pcsTelur = Math.ceil((Telur() / 1000)*1);
+		}
+		if(Esbatu() <=1000) {
+			pcsEsbatu = 1;
+		}
+		else if(Esbatu() >1000) {
+			pcsEsbatu = Math.ceil((Esbatu() /1000) *1);
+		}
+	}
+
+	// Calculate prices for each ingredient
+    private double HargaAdonanRowar() {
+        double TotalHarga = (pcsTepungterigu * hargaTepungterigu())
+                + (pcsGulapasir * hargaGulapasir())
+                + (pcsButter * hargaButter())
+                + (pcsRagi * hargaRagi())
+                + (pcsSusububuk * hargaSusububuk())
+                + (pcsSusucair * hargaSusucair())
+                + (pcsTelur * hargaTelur())
+                + (pcsEsbatu * hargaEsbatu());
+        return TotalHarga;
     }
-
-    // Calculate prices for each ingredient
-    private float HargaTepung() {
-        hargaRowarTepung = pcsTepungterigu * hargaTepungterigu();
-        return hargaRowarTepung;
-    }
-
-    private float HargaGula() {
-        hargaRowargula = pcsGulapasir * hargaGulapasir();
-        return hargaRowargula;
-    }
-
-    private float HargaButter() {
-        hargaRowarbutter = pcsButter * hargaButter();
-        return hargaRowarbutter;
-    }
-
-    private float HargaRagi() {
-        hargaRowarragi = pcsRagi * hargaRagi();
-        return hargaRowarragi;
-    }
-
-    private float HargaSusububuk() {
-        hargaRowarsusububuk = pcsSusububuk * hargaSusububuk();
-        return hargaRowarsusububuk;
-    }
-
-    private float HargaSusucair() {
-        hargaRowarsusucair = pcsSusucair * hargaSusucair();
-        return hargaRowarsusucair;
-    }
-
-    private float HargaTelur() {
-        hargaRowartelur = pcsTelur * hargaTelur();
-        return hargaRowartelur;
-    }
-
-    private float HargaEsbatu() {
-        hargaRowaresbatu = pcsEsbatu * hargaEsbatu();
-        return hargaRowaresbatu;
-    }
-
-    // Calculate price per piece of Roti Tawar
-    public void HargaRotiTawarPCS() {
-        adonanRotiTawar(); // Calculate the ingredient quantities first
-        HargaTepung();
-        HargaGula();
-        HargaButter();
-        HargaRagi();
-        HargaSusububuk();
-        HargaSusucair();
-        HargaTelur();
-        HargaEsbatu();
-
-        // Calculate the price per piece of Roti Tawar
-        float HargaAdonanRowar = hargaRowarTepung + hargaRowargula + hargaRowarragi + hargaRowarbutter + hargaRowarsusububuk + hargaRowarsusucair + hargaRowartelur + hargaRowaresbatu;
-        float HargaRoWarPCS = HargaAdonanRowar / BanyakRotiSatuAdonan;
-        System.out.println("Harga Per-pcs Roti Tawar = " + HargaRoWarPCS);
-   }
-    
-   public float getHargaRowarPCS() {
-       return HargaRoWarPCS; // Use the correct variable name
-   }
+    	
+	// Calculate price per piece of Roti Tawar
+	public void HargaRotiTawarPCS() {
+		adonanRotiTawar(); // Calculate the ingredient quantities first
+		// Calculate the price per piece of Roti Tawar
+		
+		double HargaRoWarPCS = HargaAdonanRowar() / BanyakRotiSatuAdonan;
+		System.out.println("Harga Per-pcs Roti Tawar = " + HargaRoWarPCS);
+		//        System.out.println("Harga Tepung Terigu = " + hargaRowarTepung);
+	}
 }
 
 
