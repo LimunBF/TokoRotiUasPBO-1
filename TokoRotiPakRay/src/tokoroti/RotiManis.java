@@ -159,13 +159,13 @@ public class RotiManis extends HargaBahan{
     
     
     // Calculate price per piece of Roti Tawar
-    public void HargaRotiManisPCS() {
+    public double HargaRotiManisPCS() {
         adonanRotiManis(); // Calculate the ingredient quantities first
 
         // Calculate the price per piece of Roti Tawar
         double HargaRomanPCS = (HargaAdonanRoman() / BanyakRotiManis());
         double HargaRomanPCSBulat = (Math.ceil(HargaRomanPCS /500) * 500);
-        System.out.println("Harga Per-pcs Roti Manis = " + HargaRomanPCSBulat);
+        return HargaRomanPCSBulat;
 //        System.out.println("Harga Ragi : " + pcsRagi);
    }
 }

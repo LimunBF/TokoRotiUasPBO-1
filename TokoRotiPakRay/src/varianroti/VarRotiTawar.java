@@ -10,8 +10,7 @@ public class VarRotiManis extends RotiTawar implements ToppingFilling {
     double HargaTopFillRowarVar2 = (80/BeratKeju* HargaKeju);
 	
 	double HargaVar1RotiTawar = HargaRPCSBulat + (HargaTopFillRowarVar1);
-    double HargaTopFillRowarVar2 = HargaRomanPCSBulat + (HargaTopFillRowarVar2);
+    double HargaTopFillRowarVar2 = HargaRoWarPCS + (HargaTopFillRowarVar2);
 	return HargaVar1RotiTawar;
-    return HargaVar2RotiTawar;
 	}
 }

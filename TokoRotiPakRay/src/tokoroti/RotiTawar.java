@@ -166,14 +166,14 @@ public class RotiTawar extends HargaBahan {
     }
     	
 	// Calculate price per piece of Roti Tawar
-	public void HargaRotiTawarPCS() {
+	public double HargaRotiTawarPCS() {
 		adonanRotiTawar(); // Calculate the ingredient quantities first
 		BanyakRotiTawar();
 		
 		// Calculate the price per piece of Roti Tawar
 		double HargaRoWarPCS = (HargaAdonanRowar() / BanyakRotiTawar());
 		double HargaRoWarPCSBulat = (Math.ceil(HargaRoWarPCS / 500)*500);
-		System.out.println("Harga Per-pcs Roti Tawar = " + HargaRoWarPCSBulat);
+		return HargaRoWarPCSBulat;
 		//        System.out.println("Harga Tepung Terigu = " + hargaRowarTepung);
 	}
 }

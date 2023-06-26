@@ -154,14 +154,14 @@ public class Pizza extends HargaBahan{
     }
     	
     // Calculate price per piece of Roti Tawar
-    public void HargaPizzaPCS() {
+    public double HargaPizzaPCS() {
         adonanPizza(); // Calculate the ingredient quantities first
         BanyakPizza();
         
         //Menghitung Harga Pizza per-pcs
         double HargaPizzaPCS = (HargaAdonanPizza() / BanyakPizza());
         double HargaPizzaPCSBulat = (Math.ceil(HargaPizzaPCS / 500) *500);
-        System.out.println("Harga Per-pcs Pizza = " + HargaPizzaPCSBulat);
+        return HargaPizzaPCSBulat;
 //        System.out.println("Tepung = " + hargaPizzaTepung);
 //        System.out.println("Gula = " + hargaPizzagula);
 //        System.out.println("Butter = " + hargaPizzabutter);
