@@ -16,7 +16,7 @@ public class PakRay {
 		Tiga.HargaPizzaPCS();		
 	}
 	
-//	public void adonanRotiTawar()
+	public void adonanRotiTawar()
 //	{
 //		if (Tepungterigu == 1000) 
 //		{
