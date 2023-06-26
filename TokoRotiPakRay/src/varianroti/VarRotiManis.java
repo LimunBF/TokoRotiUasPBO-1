@@ -11,6 +11,6 @@ public class VarRotiManis extends RotiManis implements ToppingFilling {
 	
 	double HargaVar1RotiManis = HargaRomanPCSBulat + (HargaTopFillCoklatVar1 + HargaTopFillKejuVar1);
 	return HargaVar1RotiManis;
-
+	
 	}
 }
