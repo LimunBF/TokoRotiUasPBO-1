@@ -1,6 +1,7 @@
 import java.util.Scanner;
+package default package;
 
-public class Main {
+public class Tampilan {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -11,7 +12,7 @@ public class Main {
         System.out.println("1. Roti Manis");
         System.out.println("2. Roti Tawar");
         System.out.println("3. Pizza");
-        System.out.println("4. keluar")
+        System.out.println("4. keluar");
         System.out.println("-------------------------");
         System.out.println("Pilihan Anda:");
 
@@ -49,6 +50,7 @@ public class Main {
                     System.out.println("Coklat");
                     case 2:
                     System.out.println("Keju");
+                }
                 break;
             case 3:
                 System.out.println("Anda memilih Pizza");
@@ -60,6 +62,7 @@ public class Main {
                     System.out.println("Sosis");
                     System.out.println("Smoked Beef");
                     System.out.println("Bombay");
+                }
                 break;
             default:
                 System.out.println("Pilihan tidak valid");
