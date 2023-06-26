@@ -83,6 +83,7 @@ public class RotiManis extends HargaBahan{
     private double hargaRomanesbatu;
     private double BanyakRotiSatuAdonan;
     public double HargaRomanPCS;
+	public double HargaRomanPCSBulat;
 
     public void adonanRotiManis() {
     	{
