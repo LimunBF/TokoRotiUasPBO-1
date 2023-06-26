@@ -12,7 +12,7 @@ public class VarPizza extends Pizza implements ToppingFilling {
 		double HargaSmokedbeefPizzaVar1 = (50/BeratSmokedbeef *HargaSmokedbeef);
 		double HargaBawangbombayPizzaVar1 = (30/BeratBawangbombay * HargaBawangbombay);
 	
-		double HargaVarPizza = HargaPizzaPCS() + (HargaTopFillKejuPizzaVar1 + HargaTopFillSosisPizzaVar1 + HargaSmokedbeefPizzaVar1 + HargaBawangbombayPizzaVar1);
-		return HargaVarPizza;
+		double HargaVar1Pizza = Math.ceil( (HargaPizzaPCS() + (HargaTopFillKejuPizzaVar1 + HargaTopFillSosisPizzaVar1 + HargaSmokedbeefPizzaVar1 + HargaBawangbombayPizzaVar1)) /100)*100;
+		return HargaVar1Pizza;
 	}
 }

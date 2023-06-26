@@ -80,7 +80,6 @@ public class Pizza extends HargaBahan{
     private double hargaPizzatelur;
     private double hargaPizzaesbatu;
     private double BanyakRotiSatuAdonan;
-    public double HargaPizzaPCS;
 
     public void adonanPizza() {
     	{
