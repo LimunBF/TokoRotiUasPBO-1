@@ -17,28 +17,4 @@ public interface ToppingFilling {
 	public float BeratSmokedbeef = 1000;
 	public float BeratBawangbombay = 500;
 	
-//	double Keju();
-//	double Coklat();
-//	double KrimVanilla() ;
-//	double SelaiRedbean();
-//	double Sosis();
-//	double Smokedbeef();
-//	double Bawangbombay();
-//	
-
-
-	
-	double RotiManisVarian1();
-	double RotiManisVarian2();
-	double RotiManisVarian3();
-	double RotiTawarVarian1();
-	double RotiTawarVarian2();
-	double RotiTawarVarian3();
-	double PizzaVarian1();
-	double PizzaVarian2();
-	double PizzaVarian3();
-	
-	
-	
-
 }

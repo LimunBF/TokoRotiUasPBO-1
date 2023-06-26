@@ -17,12 +17,5 @@ public interface Topping {
 	public float BeratSmokedbeef = 1000;
 	public float BeratBawangbombay = 500;
 	
-	double ToppingKeju();
-	double ToppingCoklat();
-	double ToppingKrimVanilla();
-	double ToppingRedbean();
-	double ToppingSosis();
-	double ToppingSmokedbeef();
-	double ToppingBawangbombay();
 ;
 	}
