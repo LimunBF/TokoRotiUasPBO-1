@@ -3,7 +3,7 @@ package tokoroti;
 public class VarianRoti implements ToppingFilling{
 	double ToppingKeju;
 	double ToppingCoklat;
-	double Topping
+	double Topping;
 
 	@Override
 	public double RotiManisVarian1() {
