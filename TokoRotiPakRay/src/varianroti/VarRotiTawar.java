@@ -12,8 +12,7 @@ public class VarRotiTawar extends RotiTawar implements ToppingFilling {
 	
 	public double RotiTawarVar2() {
 		double HargaTopfillCoklat = (80 / BeratCoklat * HargaCoklat);
-		double HargaVar2Rowar = (Math.ceil(HargaRotiTawarPCS() + (HargaTopfillCoklat) / 100)*100);
+		double HargaVar2Rowar = (Math.ceil((HargaRotiTawarPCS() + HargaTopfillCoklat) /100) * 100);
 		return HargaVar2Rowar;
-		
 	}
 }
