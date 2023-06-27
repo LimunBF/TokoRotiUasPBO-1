@@ -65,6 +65,7 @@ public class Tampilan  {
 		                System.out.println("Varian 1 Isian Keju Coklat");
 		                System.out.println("Varian 2 Isian Red Bean dan Vanilla");
 		                System.out.println("Varian 3 Isian Keju dan Sosis");
+		                System.out.println("Ketik 1, 2, atau 3 Untuk Memilih : ");
 		                System.out.print("Pilihan Anda : ");
 		                int rotimanis = input.nextInt();
 			    		TimeUnit.SECONDS.sleep(1);
@@ -108,6 +109,7 @@ public class Tampilan  {
 	                System.out.println("Anda memilih Roti Tawar");
 	                System.out.println("Varian 1 Isian Coklat ");
 	                System.out.println("Varian 2 Isian Keju ");
+	                System.out.println("Ketik 1 atau 2 Untuk Memilih : ");
 	                int rotitawar = input.nextInt();
 		                if (rotitawar == 1) {
 		                    System.out.println("Berapa Banyak Yang Anda ingin Pesan : ");
