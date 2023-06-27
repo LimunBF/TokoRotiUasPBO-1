@@ -11,9 +11,6 @@ public class Tampilan  {
     public static void main(String[] args) {
     	Tampilan Tampilanawal = new Tampilan();
     	Tampilanawal.Tampilansatu();
-    	
-    	Tampilan Tampilanakhir = new Tampilan();
-    	Tampilanakhir.Tampilandua();
 
     }
     
@@ -40,6 +37,7 @@ public class Tampilan  {
         System.out.println("5. Roti Tawar Varian 2 Isian Keju : Rp." + Rowar1.RotiTawarVar2());
         System.out.println("6. Pizza Dengan Isian Keju, Sosis, Smoked Beed dan Bawang Bombay : Rp." + Pizza1.HargaPizzaVar1());
         System.out.println("--------------------------------------------------------------------------------------");
+        Tampilandua();
     }    
     
     	public void Tampilandua() {
@@ -78,6 +76,7 @@ public class Tampilan  {
 		                	this.finalhargaorderRotiManisVar1 += order;
 				    		TimeUnit.SECONDS.sleep(3);
 				    		Tampilanlagi();
+				    		break;
 		                } else if (rotimanis == 2) {
 		                    System.out.println("Berapa Banyak Yang Anda ingin Pesan : ");
 		                	double order = input.nextInt();
@@ -86,6 +85,7 @@ public class Tampilan  {
 		                	this.finalhargaorderRotiManisVar2 += order;
 				    		TimeUnit.SECONDS.sleep(3);
 				    		Tampilanlagi();
+				    		break;
 		                } else if (rotimanis == 3) {
 		                    System.out.println("Berapa Banyak Yang Anda ingin Pesan : ");
 		                    int order = input.nextInt();
@@ -94,6 +94,7 @@ public class Tampilan  {
 		                	this.finalhargaorderRotiManisVar3 += order;
 				    		TimeUnit.SECONDS.sleep(3);
 				    		Tampilanlagi();
+				    		break;
 		                } else {
 		                    System.out.println("Pilihan tidak valid");
 		                    System.out.println("Kembali Ke Menu Pilihan");
@@ -116,6 +117,7 @@ public class Tampilan  {
 		                	this.finalhargaorderRotiTawarVar1 += order;
 				    		TimeUnit.SECONDS.sleep(3);
 				    		Tampilanlagi();
+				    		break;
 		                } else if (rotitawar == 2) {
 		                    System.out.println("Berapa Banyak Yang Anda ingin Pesan : ");
 		                    int order = input.nextInt();
@@ -124,6 +126,7 @@ public class Tampilan  {
 		                	this.finalhargaorderRotiTawarVar2 += order;
 				    		TimeUnit.SECONDS.sleep(3);
 				    		Tampilanlagi();
+				    		break;
 		                } else {
 		                    System.out.println("Pilihan tidak valid");
 		                    System.out.println("Kembali Ke Menu Pilihan");
@@ -137,7 +140,8 @@ public class Tampilan  {
 		                System.out.println("Anda memilih Pizza");
 		                System.out.println("Pizza Hanya Memiliki 1 Varian Saja");
 		                System.out.println("Varian Pizza Isian Keju, Sosis, Smoked Beed dan Bawang Bombay");
-		                System.out.println("Pilihan Anda : \n ");
+		                System.out.println("Pilihan Anda");
+		                System.out.println("Ketik 1 Untuk Memilih : ");
 			    		TimeUnit.SECONDS.sleep(1);
 		                int pizza = input.nextInt();
 			                if (pizza == 1) {
@@ -148,6 +152,7 @@ public class Tampilan  {
 			                    this.finalhargaorderPizzaVar1 += order;
 					    		TimeUnit.SECONDS.sleep(1);
 					    		Tampilanlagi();
+					    		break;
 			                } else {
 			                    System.out.println("Pilihan tidak valid");
 			                    System.out.println("Kembali Ke Menu Pilihan");
@@ -170,6 +175,7 @@ public class Tampilan  {
 	                    System.out.println("Kembali Ke Menu Pilihan");
 	                    Tampilandua();
 			    		TimeUnit.SECONDS.sleep(2);
+			    		break;
 		            }
 	    		}
     	}
@@ -205,7 +211,6 @@ public class Tampilan  {
         	System.out.println("Terima kasih!");
         	System.out.println("Telah Memilih Toko Roti Pak Ray Sebagai Pilihan Bakery Anda");
             System.out.println("-------------------------------------------------------------------------------------------------");
-        	
         	}
         	catch(InterruptedException ex)
     		{
@@ -228,10 +233,11 @@ public class Tampilan  {
 	    	TimeUnit.SECONDS.sleep(2);
         	if (ans.equals("1") || ans.equalsIgnoreCase("YA")) {
         		Tampilansatu();
-        		Tampilandua();
+        		break;
         	}        	
         	else if (ans.equals("2") || ans.equalsIgnoreCase("Tidak")) {
         		Tampilantiga();
+        		break;
         	}
         	else {
                 System.out.println("-----------------------------------");
@@ -241,7 +247,6 @@ public class Tampilan  {
                 Tampilanlagi();
                 break;
         	}
-
         	}
         	}
         	catch(InterruptedException ex)
