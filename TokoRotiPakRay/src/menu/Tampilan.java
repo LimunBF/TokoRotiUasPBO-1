@@ -9,11 +9,11 @@ import varianroti.VarPizza;
 public class Tampilan  {
 	
     public static void main(String[] args) {
-//    	Tampilan Tampilanawal = new Tampilan();
-//    	Tampilanawal.Tampilansatu();
-//    	
-//    	Tampilan Tampilanakhir = new Tampilan();
-//    	Tampilanakhir.Tampilandua();
+    	Tampilan Tampilanawal = new Tampilan();
+    	Tampilanawal.Tampilansatu();
+    	
+    	Tampilan Tampilanakhir = new Tampilan();
+    	Tampilanakhir.Tampilandua();
 
     }
     
