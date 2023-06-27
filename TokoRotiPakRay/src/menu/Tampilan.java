@@ -51,7 +51,6 @@ public class Tampilan  {
 		            System.out.println("-------------------------");
 		            System.out.println("Toko Roti PakRay");
 		            System.out.println("-------------------------");
-//		    		TimeUnit.SECONDS.sleep(1);
 		            System.out.println("Pilihan Jenis Roti:");
 		            System.out.println("1. Roti Manis ");
 		            System.out.println("2. Roti Tawar");
@@ -65,6 +64,8 @@ public class Tampilan  {
 		            if (pilihan == 1) 
 		            {		            	
 		                System.out.println("Anda memilih Roti Manis");
+		                System.out.println("Pilih Varian Roti Manis");
+		                System.out.println("Ketik Dari Angka 1, 2, 3");
 		                System.out.println("Varian 1 Isian Keju Coklat");
 		                System.out.println("Varian 2 Isian Red Bean dan Vanilla");
 		                System.out.println("Varian 3 Isian Keju dan Sosis");
@@ -75,32 +76,31 @@ public class Tampilan  {
 		                    System.out.println("Berapa Banyak Yang Anda ingin Pesan : ");
 		                	double order = input.nextInt();
 		                    double hargaorderromanvar1 = order * Roman1.RotiManisvar1();
-		                	System.out.println("Total Harga Order Pesanan Roti Manis Varian ! : Rp." + hargaorderromanvar1);
+		                	System.out.println("Total Harga Order Pesanan Roti Manis Varian 1 : Rp." + hargaorderromanvar1);
 		                	this.finalhargaorderRotiManisVar1 += order;
 				    		TimeUnit.SECONDS.sleep(3);
-		                    Tampilandua();
-		                    break;
+				    		Tampilanlagi();
 		                } else if (rotimanis == 2) {
 		                    System.out.println("Berapa Banyak Yang Anda ingin Pesan : ");
 		                	double order = input.nextInt();
 		                	double hargaorderromanvar2 = order * Roman1.RotiManisvar2();
+		                	System.out.println("Total Harga Order Pesanan Roti Manis Varian 2 : Rp." + hargaorderromanvar2);
 		                	this.finalhargaorderRotiManisVar2 += order;
 				    		TimeUnit.SECONDS.sleep(3);
-		                    Tampilandua();
-		                    break;
+				    		Tampilanlagi();
 		                } else if (rotimanis == 3) {
 		                    System.out.println("Berapa Banyak Yang Anda ingin Pesan : ");
 		                    int order = input.nextInt();
 		                	double hargaorderromanvar3 = order * Roman1.RotiManisvar3();
+		                	System.out.println("Total Harga Order Pesanan Roti Manis Varian 3 : Rp." + hargaorderromanvar3);
 		                	this.finalhargaorderRotiManisVar3 += order;
 				    		TimeUnit.SECONDS.sleep(3);
-		                    Tampilandua();
-		                    break;
+				    		Tampilanlagi();
 		                } else {
 		                    System.out.println("Pilihan tidak valid");
 		                    System.out.println("Kembali Ke Menu Pilihan");
 				    		TimeUnit.SECONDS.sleep(1);
-		                    Tampilandua();
+				    		Tampilandua();
 		                    break;
 		                }
 	            } 
@@ -114,23 +114,23 @@ public class Tampilan  {
 		                    System.out.println("Berapa Banyak Yang Anda ingin Pesan : ");
 		                    int order = input.nextInt();
 		                	double hargaorderrowarvar1 = order * Rowar1.RotiTawarvar1();
+		                	System.out.println("Total Harga Order Pesanan Roti Tawar Varian 1 : Rp." + hargaorderrowarvar1);
 		                	this.finalhargaorderRotiTawarVar1 += order;
 				    		TimeUnit.SECONDS.sleep(3);
-		                    Tampilandua();
-		                    break;
+				    		Tampilanlagi();
 		                } else if (rotitawar == 2) {
 		                    System.out.println("Berapa Banyak Yang Anda ingin Pesan : ");
 		                    int order = input.nextInt();
 		                	double hargaorderrowarvar2 = order * Rowar1.RotiTawarVar2();
+		                	System.out.println("Total Harga Order Pesanan Roti Tawar Varian 2 : Rp." + hargaorderrowarvar2);
 		                	this.finalhargaorderRotiTawarVar2 += order;
 				    		TimeUnit.SECONDS.sleep(3);
-		                    Tampilandua();
-		                    break;
+				    		Tampilanlagi();
 		                } else {
 		                    System.out.println("Pilihan tidak valid");
 		                    System.out.println("Kembali Ke Menu Pilihan");
 				    		TimeUnit.SECONDS.sleep(1);
-		                    Tampilandua();
+				    		Tampilandua();
 		                    break;
 		                }
 		            } 
@@ -138,7 +138,7 @@ public class Tampilan  {
 		            {
 		                System.out.println("Anda memilih Pizza");
 		                System.out.println("Pizza Hanya Memiliki 1 Varian Saja");
-		                System.out.println("Varian 1  Isian Keju, Sosis, Smoked Beed dan Bawang Bombay");
+		                System.out.println("Varian Pizza Isian Keju, Sosis, Smoked Beed dan Bawang Bombay");
 		                System.out.println("Pilihan Anda : \n ");
 			    		TimeUnit.SECONDS.sleep(1);
 		                int pizza = input.nextInt();
@@ -146,31 +146,32 @@ public class Tampilan  {
 			                    System.out.println("Berapa Banyak Yang Anda ingin Pesan : ");
 			                    int order = input.nextInt();
 			                    double hargaorderpizzavar1 = order * Pizza1.HargaPizzaVar1();
+			                	System.out.println("Total Harga Order Pesanan Roti Pizza : Rp." + hargaorderpizzavar1);
 			                    this.finalhargaorderPizzaVar1 += order;
 					    		TimeUnit.SECONDS.sleep(1);
+					    		Tampilanlagi();
 			                } else {
 			                    System.out.println("Pilihan tidak valid");
 			                    System.out.println("Kembali Ke Menu Pilihan");
 					    		TimeUnit.SECONDS.sleep(1);
-			                    Tampilandua();
+					    		Tampilandua();
 			                    break;
 			                }
 		            } 
 		            else if (pilihan == 4) 
 		            {
 		            	System.out.println("Terima kasih!");
+		            	System.out.println("Telah Memilih Toko Roti Pak Ray Sebagai Pilihan Bakery Anda");
 		            	break;
 		            } 
 		            else 
 		            {
-		            	System.out.println();
 		            	System.out.println("Pilihan tidak valid");
+	                    System.out.println("Kembali Ke Menu Pilihan");
+	                    Tampilandua();
+			    		TimeUnit.SECONDS.sleep(2);
 		            }
 	    		}
-	            System.out.println("--------------------------------------------------------------------------------------");
-	            System.out.println("Total Orderan Yang Anda Pesan Adalah : ");
-	            System.out.println("--------------------------------------------------------------------------------------");
-	            System.out.println("1. Roti Manis Varian 1 : "  );
     	}
     		catch(InterruptedException ex)
     		{
@@ -181,20 +182,67 @@ public class Tampilan  {
     	
     	
         public void Tampilantiga() {
-    		Scanner input = new Scanner(System.in);
-            System.out.println("--------------------------------------------------------------------------------------");
+        	try {
+//    		Scanner input = new Scanner(System.in);
+	    	TimeUnit.SECONDS.sleep(2);
+            System.out.println("-------------------------------------------------------------------------------------------------");
             System.out.println("Detail Total Orderan Yang Anda Pesan Adalah : ");
-            System.out.println("--------------------------------------------------------------------------------------");
-            int order = input.nextInt();
-            double hargaorderpizzavar1 = order * Pizza1.HargaPizzaVar1();
-            this.finalhargaorderPizzaVar1 += order;
-            this.finalhargaorderRotiTawarVar2 += order;
+            System.out.println("-------------------------------------------------------------------------------------------------");
+            System.out.println("Total Orderan Roti Manis Varian 1 : " + finalhargaorderRotiManisVar1);
+            System.out.println("Total Orderan Roti Manis Varian 2 : " + finalhargaorderRotiManisVar2);
+            System.out.println("Total Orderan Roti Manis Varian 3 : " + finalhargaorderRotiManisVar3);
+            System.out.println("Total Orderan Roti Tawar Varian 1 : " + finalhargaorderRotiTawarVar1);
+            System.out.println("Total Orderan Roti Tawar Varian 2 : " + finalhargaorderRotiTawarVar2);
+            System.out.println("Total Orderan Roti Pizza Varian 1 : " + finalhargaorderPizzaVar1);
+            System.out.println("-------------------------------------------------------------------------------------------------");
             System.out.println("1. Roti Manis Varian 1 : " + ((Math.ceil(Roman1.RotiManisvar1() * finalhargaorderRotiManisVar1)/500) *500));
             System.out.println("2. Roti Manis Varian 2 : " + ((Math.ceil(Roman1.RotiManisvar2() * finalhargaorderRotiManisVar2) / 500) *500));
             System.out.println("3. Roti Manis Varian 3 : " + ((Math.ceil(Roman1.RotiManisvar3() * finalhargaorderRotiManisVar3) / 500) *500));
             System.out.println("4. Roti Tawar Varian 1 : " + ((Math.ceil(Rowar1.RotiTawarvar1() * finalhargaorderRotiManisVar3) /500 ) * 500));
             System.out.println("5. Roti Tawar Varian 2 : " + ((Math.ceil(Rowar1.RotiTawarVar2() * finalhargaorderRotiTawarVar2) /500) *500));
             System.out.println("6. Roti Pizza Varian 1 : " + ((Math.ceil(Pizza1.HargaPizzaVar1() * finalhargaorderPizzaVar1) /500 ) * 500));
+            System.out.println("-------------------------------------------------------------------------------------------------");
+        	}
+        	catch(InterruptedException ex)
+    		{
+    			ex.printStackTrace();
+    		}
+        }
+        
+        public void Tampilanlagi( ) {
+        	try {
+        	while(true){
+            System.out.println("---------------------------------------------------------------------------------");
+        	System.out.println("Anda Telah Memilih Varian Roti Yang Anda Inginkan");
+	    	TimeUnit.SECONDS.sleep(1);
+        	System.out.println("Apakah Anda Ingin Memilih Varian Roti Lagi");
+        	System.out.println("Ketik 'Ya' atau Ketik 1 Jika Ingin Melanjutkan");
+        	System.out.println("Ketik 'Tidak' atau Ketik 2 Jika Tidak Ingin Melanjutkan dan Memunculkan Total Harga");
+            System.out.println("---------------------------------------------------------------------------------");
+        	Scanner jawab = new Scanner(System.in);
+            String ans = jawab.next();
+	    	TimeUnit.SECONDS.sleep(2);
+        	if (ans.equals("1") || ans.equalsIgnoreCase("YA")) {
+        		Tampilansatu();
+        	}        	
+        	else if (ans.equals("2") || ans.equalsIgnoreCase("Tidak")) {
+        		Tampilantiga();
+        	}
+        	else {
+                System.out.println("-----------------------------------");
+        		System.out.println("Input Yang Anda Berikan Salah");
+        		System.out.println("Mohon Input Kembali ");
+                System.out.println("-----------------------------------");
+                Tampilanlagi();
+                break;
+        	}
 
+        	}
+        	}
+        	catch(InterruptedException ex)
+    		{
+    			ex.printStackTrace();
+    		}
         }
 }
+
