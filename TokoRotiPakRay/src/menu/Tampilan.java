@@ -14,9 +14,7 @@ public class Tampilan  {
 //    	
 //    	Tampilan Tampilanakhir = new Tampilan();
 //    	Tampilanakhir.Tampilandua();
-    	
-    	Tampilan Tampilanakhirakhir = new Tampilan();
-    	Tampilanakhirakhir.Tampilantiga();
+
     }
     
     private static float finalhargaorderRotiManisVar1;
@@ -160,8 +158,10 @@ public class Tampilan  {
 		            } 
 		            else if (pilihan == 4) 
 		            {
+		                System.out.println("--------------------------------------------------------------");
 		            	System.out.println("Terima kasih!");
 		            	System.out.println("Telah Memilih Toko Roti Pak Ray Sebagai Pilihan Bakery Anda");
+		                System.out.println("--------------------------------------------------------------");
 		            	break;
 		            } 
 		            else 
@@ -202,6 +202,10 @@ public class Tampilan  {
             System.out.println("5. Roti Tawar Varian 2 : " + ((Math.ceil(Rowar1.RotiTawarVar2() * finalhargaorderRotiTawarVar2) /500) *500));
             System.out.println("6. Roti Pizza Varian 1 : " + ((Math.ceil(Pizza1.HargaPizzaVar1() * finalhargaorderPizzaVar1) /500 ) * 500));
             System.out.println("-------------------------------------------------------------------------------------------------");
+        	System.out.println("Terima kasih!");
+        	System.out.println("Telah Memilih Toko Roti Pak Ray Sebagai Pilihan Bakery Anda");
+            System.out.println("-------------------------------------------------------------------------------------------------");
+        	
         	}
         	catch(InterruptedException ex)
     		{
@@ -224,6 +228,7 @@ public class Tampilan  {
 	    	TimeUnit.SECONDS.sleep(2);
         	if (ans.equals("1") || ans.equalsIgnoreCase("YA")) {
         		Tampilansatu();
+        		Tampilandua();
         	}        	
         	else if (ans.equals("2") || ans.equalsIgnoreCase("Tidak")) {
         		Tampilantiga();
