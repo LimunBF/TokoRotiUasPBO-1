@@ -16,5 +16,15 @@ public class VarRotiManis extends RotiManis implements ToppingFilling {
 	return HargaFinalVar1Roman;
 	}
 	
+	public double RotiManisvar2() {
+
+	double HargaTopFillRedBeanVar2 = (10 / BeratSelairedbean * HargaSelairedbean); 
+	double HargaTopFillVanillaVar2 = (5 / BeratKrimvanilla * HargaKrimvanilla);
+	
+	double HargaVar2RotiManis = HargaRomanPCS() + (HargaTopFillRedBeanVar2 + HargaTopFillVanillaVar2);
+	double HargaFinalVar2Roman = (Math.ceil((HargaVar2RotiManis * 1.4) /100) *100);
+
+	return HargaFinalVar2Roman;
+}
 	
 }
